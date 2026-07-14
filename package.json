@@ -1,0 +1,70 @@
+{
+  "name": "streamguard-react",
+  "version": "0.1.0",
+  "description": "Error boundaries and hooks for streaming LLM UIs \u2014 stalls, drops, tool-call failures, retry/resume.",
+  "license": "MIT",
+  "author": "Muhammad Zia <mughalhere@icloud.com>",
+  "homepage": "https://github.com/mughalhere/streamguard-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mughalhere/streamguard-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mughalhere/streamguard-react/issues"
+  },
+  "keywords": [
+    "react",
+    "llm",
+    "streaming",
+    "sse",
+    "error-boundary",
+    "ai",
+    "typescript"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests --ext .ts,.tsx",
+    "prepublishOnly": "npm run build && npm run test && npm run typecheck"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "jsdom": "^25.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tsup": "^8.5.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
