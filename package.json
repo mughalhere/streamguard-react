@@ -1,6 +1,6 @@
 {
   "name": "streamguard-react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Error boundaries and hooks for streaming LLM UIs \u2014 stalls, drops, tool-call failures, retry/resume.",
   "license": "MIT",
   "author": "Muhammad Zia <mughalhere@icloud.com>",
